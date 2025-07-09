@@ -1,0 +1,833 @@
+input[type="checkbox"] {
+    accent-color: #a33225;
+}
+
+.outgunned-adrenalin {
+    color: transparent !important;
+    text-shadow: 0 0 0 #a33225;
+}
+
+.outgunned-dice-roller {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.outgunned-main-grid {
+    display: grid;
+    grid-template-areas:
+    "avatar details details"
+    "statistics grit grit"
+    "statistics adrenaline feats"
+    "statistics spotlight feats"
+    "statistics roulette feats"
+    "youlook youlook mission"
+    "gunsngear gunsngear gunsngear"
+    "cashstorageride cashstorageride cashstorageride"
+    "notes notes notes";
+    grid-template-columns: 0.9fr 0.8fr 1fr;
+    background-image: url(https://files.d20.io/images/446705807/JzAVhd_whGcx6p6g_2xaHg/original.jpg?175112324255)
+}
+
+.outgunned-box {
+    border: 2px solid #a33225;
+}
+
+.outgunned-avatar {
+    grid-area: avatar;
+    border: 1px solid black;
+    margin: 10px;
+    transform: rotate(-7deg);
+    background-color: white;
+    box-shadow: -5px 5px 5px gray;
+}
+
+.outgunned-avatar > img:first-child {
+    border: 1px solid black;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin: 10px;
+    width: -webkit-fill-available;
+}
+
+.outgunned-avatar > img:nth-child(2) {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.outgunned-details {
+    grid-area: details;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-span: 2;
+}
+
+.outgunned-details > div,
+.outgunned-mission > div:first-of-type,
+.outgunned-ride > div:first-of-type {
+    border-bottom: 2px solid #a33225;
+    display: flex;
+    align-items: end;
+}
+
+.outgunned-details > div > span,
+.outgunned-mission > div:first-of-type > span {
+    color: #a33225;
+    font-size: 12px;
+    font-weight: bold;
+    align-content: end;
+    margin-left: 5px;
+    padding-right: 10px;
+    width: 22%;
+}
+
+.outgunned-details > div > input,
+.outgunned-mission > div > input {
+    border: 0;
+    background-color: white;
+    height: 40% !important;
+    width: 100% !important;
+    margin-top: 4px;
+    border-radius: 0;
+    margin-bottom: 1px;
+    padding: 4px;
+    outline-color: #a33225;
+    color: black;
+    padding-left: 10px;
+}
+
+.outgunned-statistics {
+    grid-area: statistics;
+    border: 1px solid #a33225;
+    margin-top: 30px;
+}
+
+.outgunned-statistics-block {
+    margin-top: 30px;
+}
+
+.outgunned-statistics-block > div:first-child > span:first-child {
+    color: white;
+    background-color: #a33225;
+    font-weight: bold;
+    font-size: 20px;
+    clip-path: polygon(
+    20% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+    );
+    padding-left: 20px;;
+    padding-right: 5px;
+    display: inline-block;
+    margin: 5px;
+    width: 90px;
+    text-align: right;
+}
+
+.outgunned-statistics-block > div:not(:first-child) {
+    margin-left: 90px;
+    text-align: right;
+}
+
+.outgunned-statistics-block > div:not(:first-child) > span {
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+    width: 100px;
+    font-size: 15px;
+}
+
+.outgunned-statistics-block > div > input {
+    margin-bottom: 5px;
+}
+
+.outgunned-statistics-block > div {
+    display: inline-flex;
+}
+
+.outgunned-statistics-block > div > div {
+    display: inline-flex;
+    margin-top: -12px;
+}
+
+.outgunned-statistics-block > div > div > input.outgunned-attr[type="checkbox"] + span::before {
+    color: black;
+}
+
+.outgunned-centre-checkbox {
+    margin-left: -5px !important;
+    display: inline-grid;
+    width: 16px;
+    min-width: 16px;
+    max-width: 16px;
+    height: 35px;
+}
+
+input.outgunned-attr[type="checkbox"] {
+    opacity: 0;
+    position: relative;
+    left: 15px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 1;
+    width: 15px;
+    margin-left: -8px !important;
+    height: 16px;
+}
+
+input.outgunned-attr[type="checkbox"] + span::before {
+    position: relative;
+    top: 0px;
+    color: #a33225;
+    text-shadow: none;
+    text-align: center;
+    content: "◇";
+    font-size: 30px;;
+    box-shadow: none;
+}
+
+input.outgunned-attr[type="checkbox"]:checked + span::before {
+    content: "◆";
+    font-size: 27px;
+}
+
+/* Grit images*/
+/*
+Normal https://files.d20.io/images/447651817/TVo4h0DUk4FU-nMJLT-P5g/original.png
+Bad    https://files.d20.io/images/447651818/svVo0FS3eklsdKRtdgYG2A/original.png
+Hot    https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png
+*/
+
+.outgunned-grit {
+    grid-area: grit;
+    margin-top: 30px;
+    color: #a33225;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 30px auto 0 auto;
+    border: 1px solid #a33225;
+    padding: 3px;
+}
+
+.outgunned-grit > div:first-of-type {
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    grid-template-rows: 60px;
+}
+
+.outgunned-gritnormal {
+    display: block;
+    background-image: url(https://files.d20.io/images/447651817/TVo4h0DUk4FU-nMJLT-P5g/original.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+}
+
+.outgunned-gritbad {
+    display: block;
+    background-image: url(https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+}
+
+.outgunned-grithot {
+    display: block;
+    background-image: url(https://files.d20.io/images/447651818/svVo0FS3eklsdKRtdgYG2A/original.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    margin-top: -2px;
+}
+
+.outgunned-grit > div > span > input {
+    margin-top: 21px;
+    margin-left: 14px;
+    transform: scale(1.9);
+    clip-path: circle(42% at 50% 50%);
+}
+
+.outgunned-grit > div > span > span:first-of-type {
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.outgunned-grit > div > span:nth-of-type(12) > span:first-of-type {
+    color: #a33225;
+}
+
+.outgunned-grit > div:nth-of-type(2) {
+    display: grid;
+
+}
+
+.outgunned-grit-hot {
+    border: 2px solid #a33225 !important;
+}
+
+.outgunned-grit-text {
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.outgunned-grit-text-hot {
+    color: #a33225;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.outgunned-feats {
+    grid-area: feats;
+    margin-left: 10px;
+    border: 1px solid #a33225;
+    padding: 3px;
+    margin-top: 15px;
+}
+
+.outgunned-feats > span {
+    border: 0 !important;
+    width: 95%;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #a33225;
+}
+
+.outgunned-feats > table > tbody > tr > td > input {
+    width: 99.5%;
+    background-color: white;
+    font-weight: bold;
+}
+
+.outgunned-feats > table > tbody > tr > td > textarea {
+    width: 96%;
+    height: 50px;
+    resize: vertical;
+    background-color: white;
+}
+
+.outgunned-spotlight {
+    grid-area: spotlight;
+    text-align: center;
+    position: relative;
+    margin-top: -50px;
+}
+
+.outgunned-spotlight span {
+    margin-top: 30px;
+    color: #a33225;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.outgunned-spotlight span:nth-of-type(2) {
+    font-size: 12px;
+}
+
+.outgunned-spotlight > img {
+    width: 80%;
+}
+
+.outgunned-spotlight >  input {
+    position: absolute;
+    transform: scale(1.6);
+    clip-path: circle(40% at 50% 50%);
+}
+
+.outgunned-spotlight > input:first-of-type {
+    left: 156px;
+    top: 20.5px;
+}
+
+.outgunned-spotlight  input:nth-of-type(2) {
+    left: 178px;
+    top: 41.5px;
+}
+
+.outgunned-spotlight  input:nth-of-type(3) {
+    left: 190px;
+    top: 69.5px;
+}
+
+/*
+Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
+*/
+.outgunned-adrenaline {
+    grid-area: adrenaline;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.outgunned-adrenaline > div:first-of-type {
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px 40px 40px;
+    grid-template-rows: 20px 60px;
+    justify-items: center;
+    margin-bottom: 10px;
+}
+
+.outgunned-adrenaline input {
+    margin-bottom: -130px;
+    width: 16px;
+}
+
+.outgunned-adrenaline-icon1,
+.outgunned-adrenaline-icon2,
+.outgunned-adrenaline-icon3,
+.outgunned-adrenaline-icon4,
+.outgunned-adrenaline-icon5,
+.outgunned-adrenaline-icon6 {
+    display: block;
+    background-image: url(https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    height: 60px;
+    width: 40px;
+    margin-top: -15px;
+}
+
+.outgunned-adrenaline-check1:checked ~ .outgunned-adrenaline-icon1,
+.outgunned-adrenaline-check2:checked ~ .outgunned-adrenaline-icon2,
+.outgunned-adrenaline-check3:checked ~ .outgunned-adrenaline-icon3,
+.outgunned-adrenaline-check4:checked ~ .outgunned-adrenaline-icon4,
+.outgunned-adrenaline-check5:checked ~ .outgunned-adrenaline-icon5,
+.outgunned-adrenaline-check6:checked ~ .outgunned-adrenaline-icon6 {
+    background-image: url(https://files.d20.io/images/447912548/EWIH5QgtpBdcnE7TEMhupw/original.png);
+}
+
+.outgunned-adrenaline > span:first-of-type {
+    font-size: 20px;
+    font-weight: bold;
+    color: #a33225;
+}
+
+.outgunned-adrenaline > span:nth-of-type(2) {
+    font-size: 12px;
+    font-weight: bold;
+    color: #a33225;
+}
+
+.outgunned-mission {
+    grid-area: mission;
+    margin-left: 10px;
+    border: 1px solid #a33225;
+    padding: 3px;
+    margin-top: 5px;
+}
+
+.outgunned-mission > div > span {
+    margin-top: 30px;
+    color: #a33225;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.outgunned-mission > div:nth-of-type(2) {
+    text-align: center;
+}
+
+.outgunned-mission > div:nth-of-type(2) > span {
+    display: inline-block;
+}
+
+.outgunned-mission > div:nth-of-type(2) > input {
+    border-bottom: 2px solid #a33225;
+}
+
+.outgunned-mission > div:nth-of-type(2) > span:nth-of-type(2) {
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.outgunned-youlook {
+    grid-area: youlook;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.outgunned-youlook > div:first-child > span:first-child {
+    color: white;
+    background-color: #a33225;
+    font-weight: bold;
+    font-size: 20px;
+    clip-path: polygon(
+    calc(100% - 30px) 0%,
+    100% 100%,
+    0% 100%,
+    0% 0%
+    );
+    padding-right: 10%;
+    padding-left: 5px;
+    display: block;
+    /*    width: 100%;*/
+    text-align: center ;
+}
+
+.outgunned-youlook > div:first-child > span:nth-of-type(2) {
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.outgunned-youlook table {
+    width: 100%;
+}
+
+.outgunned-youlook td {
+    margin-top: 30px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: right;
+}
+
+.outgunned-youlook td:nth-child(3),
+.outgunned-youlook td:nth-child(7) {
+    text-align: left;
+}
+
+.outgunned-youlook td > span {
+    color: gray;
+}
+.outgunned-roulette {
+    grid-area: roulette;
+    position: relative;
+    margin-top: -60px;
+}
+
+.outgunned-roulette > input {
+    transform: scale(1.5);
+}
+
+.outgunned-roulette > input:nth-of-type(1) {
+    left: 176px;
+    top: 45px;
+}
+
+.outgunned-roulette > input:nth-of-type(2) {
+    left: 177px;
+    top: 130px;
+}
+
+.outgunned-roulette > input:nth-of-type(3) {
+    left: 106px;
+    top: 170px;
+}
+
+.outgunned-roulette > input:nth-of-type(4) {
+    left: 33px;
+    top: 129px;
+}
+
+.outgunned-roulette > input:nth-of-type(5) {
+    left: 33px;
+    top: 46px;
+}
+
+.outgunned-roulette > input:nth-of-type(6) {
+    left: 106px;
+    top: 5px;
+}
+
+.outgunned-roulette > input {
+    position: absolute;
+}
+
+.outgunned-roulette > img {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.outgunned-roulette > button {
+    color: #a33225;
+    font-weight: bold;
+    font-size: 3em;
+    position: absolute;
+    top: 160px;
+    left: 148px;
+    border: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.outgunned-gunsngear {
+    grid-area: gunsngear;
+}
+
+.outgunned-gunsngear > span:first-child {
+    color: white;
+    background-color: #a33225;
+    font-weight: bold;
+    font-size: 20px;
+    clip-path: polygon(
+    calc(100% - 30px) 0%,
+    100% 100%,
+    0% 100%,
+    0% 0%
+    );
+    padding-right: 10%;
+    padding-left: 5px;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.outgunned-gunsngear-guns {
+    display: grid;
+    grid-template-columns: 7fr 1fr 1fr 1fr 1fr 1.5fr;
+    margin-top: -2px;
+    margin-bottom: 5px;
+}
+
+.outgunned-gunsngear-guns > span {
+    color: white;
+    background-color: #a33225;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+.outgunned-gunsngear-guns > span:first-child {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.outgunned-gunsngear-guns > div {
+    display: flex;
+}
+
+.outgunned-gunsngear-guns > input:nth-child(8),
+.outgunned-gunsngear-guns > input:nth-child(10),
+.outgunned-gunsngear-guns > input:nth-child(12n + 1),
+.outgunned-gunsngear-guns > input:nth-child(12n + 3),
+.outgunned-gunsngear-guns > input:nth-child(12n + 5),
+.outgunned-gunsngear-guns > div:nth-child(12n + 6),
+.outgunned-gunsngear-guns > input:nth-child(18n+2),
+.outgunned-gunsngear-guns > input:nth-child(18n+4) {
+    background-color: white;
+}
+
+
+.outgunned-gunsngear-guns > div:nth-child(12n + 6),
+.outgunned-gunsngear-guns > input:nth-child(12n + 1),
+/*.outgunned-gunsngear-guns > input:nth-child(12n + 2),*/
+.outgunned-gunsngear-guns > input:nth-child(12n + 3),
+/*.outgunned-gunsngear-guns > input:nth-child(12n + 4),*/
+.outgunned-gunsngear-guns > input:nth-child(12n + 5) {
+    background-color: white;
+}
+
+.outgunned-gunsngear input {
+    width: 100% !important;
+}
+
+.outgunned-gunsngear-gear > div {
+    display: flex;
+}
+
+.outgunned-gunsngear-gear > div > span {
+    font-family: Pictos;
+    font-size: 3em;
+    margin-top: -13px;
+    margin-bottom: -13px;
+    color: #a33225;
+}
+
+.outgunned-cash-storage-ride {
+    grid-area: cashstorageride;
+    display: grid;
+    grid-template-columns: 0.75fr 1.75fr 2fr;
+}
+
+.outgunned-cash > img {
+    display: block;
+    align-content: center;
+    margin-top: 30px;
+}
+
+.outgunned-cash > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.outgunned-storage {
+    margin-top: 30px;
+    margin-right: 15px;
+}
+
+.outgunned-storage > span:first-child {
+    color: white;
+    background-color: #a33225;
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 10%;
+    padding-left: 5px;
+    display: block;
+    text-align: center;
+}
+
+.outgunned-storage > input {
+    width: 100%;
+    background-color: white;
+}
+
+.outgunned-ride {
+    margin-top: 30px;
+}
+
+.outgunned-ride-hits {
+    display: block;
+    background-image: url(https://files.d20.io/images/447651817/TVo4h0DUk4FU-nMJLT-P5g/original.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    height: 40px;
+}
+
+.outgunned-ride-speed {
+    display: block;
+    background-image: url(https://files.d20.io/images/447915786/Y6ORl6g5ENF274zGmBs70g/original.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    height: 40px;
+}
+
+.outgunned-ride-armour > input {
+    accent-color: #545454;
+}
+
+.outgunned-ride-armour {
+    display: block;
+    background-image: url(https://files.d20.io/images/447915661/QP4vVW-_jvom8D58l00vew/original.png?17519678905);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    height: 40px;
+}
+
+.outgunned-ride > div input {
+    width: 100%;
+    background-color: white;
+    filter: brightness(100%);
+}
+
+.outgunned-ride > div > span > input[type="checkbox"] {
+    margin-left: 5.5px;
+    transform: scale(1.9);
+    clip-path: circle(19% at 50% 50%);
+}
+
+.outgunned-ride > div > span > input[type="text"] {
+    margin-left: 15px;
+    width: 25px !important;
+    background: transparent;
+    appearance: none;
+    border: 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: #a33225;
+}
+
+.outgunned-ride > div > input[type="checkbox"]:nth-of-type(4),
+.outgunned-ride > div > input[type="checkbox"]:nth-of-type(5),
+.outgunned-ride > div > input[type="checkbox"]:nth-of-type(6) {
+    accent-color: black
+}
+
+.outgunned-ride > span:first-child {
+    color: white;
+    background-color: #a33225;
+    font-weight: bold;
+    font-size: 20px;
+    clip-path: polygon(
+    calc(100% - 30px) 0%,
+    100% 100%,
+    0% 100%,
+    0% 0%
+    );
+    padding-right: 10%;
+    padding-left: 5px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.outgunned-ride > div > span {
+    color: #a33225;
+    font-size: 12px;
+    font-weight: bold;
+    align-content: center;
+    margin-left: 5px;
+    padding-right: 10px;
+    width: 22%;
+}
+
+.outgunned-ride > div:nth-of-type(2) {
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.sheet-rolltemplate-diceroller {
+    border: 2px solid #a33225;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.sheet-rolltemplate-diceroller > div > div {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.sheet-rolltemplate-diceroller > div > div > span {
+    color: #a33225;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px white;
+    margin-bottom: 15px;
+}
+
+.sheet-rolltemplate-diceroller > div > div > span:nth-of-type(2) {
+    font-size: 1.5em;
+}
+
+.sheet-rolltemplate-diceroller > div > div > div {
+    color: #a33225;
+    font-weight: bold;
+    display: inline-flex;
+    font-size: 0.75em;
+    margin-bottom: 5px;
+}
+
+.sheet-rolltemplate-diceroller > div > div > div:empty {
+    display: none;
+}
+.sheet-rolltemplate-diceroller img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.outgunned-notes {
+    grid-area: notes;
+}
+
+.outgunned-notes > textarea {
+    box-sizing: border-box;
+    background-color: white;
+}

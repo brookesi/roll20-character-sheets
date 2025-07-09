@@ -1,0 +1,948 @@
+<div class="outgunned-main-grid">
+    <div class="outgunned-avatar">
+        <img name="attr_character_avatar">
+        <img src="https://www.belloflostsouls.net/wp-content/uploads/2023/05/outgunned-logo.jpg">
+        <div class="outgunned-dice-roller">
+            <input type="number" name="attr_num_dice">
+            <button type="action" name="act_diceroller" data-i18n="roll-u">ROLL</button>
+            <br>
+            <br>
+            <button type="action" name="act_reroll" data-i18n="reroll-u">RE-ROLL</button>
+            <button type="action" name="act_freereroll" data-i18n="freereroll-u">FREE RE-ROLL</button>
+            <button type="action" name="act_allin" data-i18n="allin-u">ALL IN</button>
+        </div>
+    </div>
+    <div class="outgunned-details">
+        <div>
+            <span data-i18n="name-u">NAME</span>
+            <input type="text" name="attr_character_name">
+        </div>
+        <div>
+            <span data-i18n="role-u">ROLE</span>
+            <input type="text" name="attr_role">
+        </div>
+        <div>
+            <span data-i18n="trope-u">TROPE</span>
+            <input type="text" name="attr_trope">
+        </div>
+        <div>
+            <span style="width: 52%" data-i18n="job-u">JOB</span>
+            <input type="text" name="attr_job">
+            <span data-i18n="age-u">AGE</span>
+            <input type="text" name="attr_age">
+        </div>
+        <div>
+            <span data-i18n="flaw-u">FLAW</span>
+            <input type="text" name="attr_flaw">
+        </div>
+        <div>
+            <span data-i18n="catchphrase-u">CATCHPHRASE</span>
+            <input type="text" name="attr_catchphrase">
+        </div>
+    </div>
+    <div class="outgunned-statistics">
+        <div class="outgunned-statistics-block">
+            <div>
+                <span data-i18n="brawn-u">BRAWN</span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_brawn1" value="1">
+                <span class="outgunned-centre-checkbox"></span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_brawn2" value="1">
+                <span class="outgunned-centre-checkbox"></span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_brawn3" value="1">
+                <span class="outgunned-centre-checkbox"></span>
+            </div>
+            <div>
+                <span data-i18n="endure-u">ENDURE</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_endure1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_endure2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_endure3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="fight-u">FIGHT</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_fight1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_fight2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_fight3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+
+                </div>
+            </div>
+            <div>
+                <span data-i18n="force-u">FORCE</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_force1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_force2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_force3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="stunt-u">STUNT</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_stunt1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_stunt2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_stunt3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+        </div>
+        <div class="outgunned-statistics-block">
+            <div>
+                <span data-i18n="nerves-u">NERVES</span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_nerves1"
+                       value="1">
+                <span class="outgunned-centre-checkbox"></span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_nerves2"
+                       value="1">
+                <span class="outgunned-centre-checkbox"></span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_nerves3"
+                       value="1">
+                <span class="outgunned-centre-checkbox"></span>
+            </div>
+            <div>
+                <span data-i18n="cool-u">COOL</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_cool1" value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_cool2" value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_cool3" value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="drive-u">DRIVE</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_drive1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_drive2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_drive3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="shoot-u">SHOOT</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_shoot1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_shoot2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_shoot3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="survival-u">SURVIVAL</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_survival1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_survival2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_survival3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+        </div>
+        <div class="outgunned-statistics-block">
+            <div>
+                <span data-i18n="smooth-u">SMOOTH</span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_smooth1"
+                       value="1">
+                <span class="outgunned-centre-checkbox"></span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_smooth2"
+                       value="1">
+                <span class="outgunned-centre-checkbox"></span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_smooth3"
+                       value="1">
+                <span class="outgunned-centre-checkbox"></span>
+            </div>
+            <div>
+                <span data-i18n="flirt-u">FLIRT</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_flirt1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_flirt2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_flirt3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="leadership-u">LEADERSHIP</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_leadership1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_leadership2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_leadership3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="speech-u">SPEECH</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_speech1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_speech2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_speech3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="style-u">STYLE</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_style1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_style2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_style3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+        </div>
+        <div class="outgunned-statistics-block">
+            <div>
+                <span data-i18n="focus-u">FOCUS</span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_focus1"
+                       value="1">
+                <span class="outgunned-centre-checkbox"></span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_focus2"
+                       value="1">
+                <span class="outgunned-centre-checkbox"></span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_focus3"
+                       value="1">
+                <span class="outgunned-centre-checkbox"></span>
+            </div>
+            <div>
+                <span data-i18n="detect-u">DETECT</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_detect1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_detect2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_detect3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="fix-u">FIX</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_fix1" value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_fix2" value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_fix3" value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="heal-u">HEAL</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_heal1" value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_heal2" value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_heal3" value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="know-u">KNOW</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_know1" value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_know2" value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_know3" value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+        </div>
+        <div class="outgunned-statistics-block">
+            <div>
+                <span data-i18n="crime-u">CRIME</span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_crime1"
+                       value="1">
+                <span class="outgunned-centre-checkbox"></span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_crime2"
+                       value="1">
+                <span class="outgunned-centre-checkbox"></span>
+                <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_crime3"
+                       value="1">
+                <span class="outgunned-centre-checkbox"></span>
+            </div>
+            <div>
+                <span data-i18n="awareness-u">AWARENESS</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_awareness1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_awareness2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_awareness3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="dexterity-u">DEXTERITY</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_dexterity1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_dexterity2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_dexterity3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="stealth-u">STEALTH</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_stealth1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_stealth2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_stealth3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+            <div>
+                <span data-i18n="streetwise-u">STREETWISE</span>
+                <div>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_streetwise1"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_streetwise2"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                    <input class="outgunned-attr outgunned-centre-checkbox" type="checkbox" name="attr_streetwise3"
+                           value="1">
+                    <span class="outgunned-centre-checkbox"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outgunned-grit">
+        <span data-i18n="grit-u">GRIT</span>
+        <div>
+            <span class="outgunned-gritnormal"><input type="checkbox" name="attr_grit1" value="1"></span>
+            <span class="outgunned-gritnormal"><input type="checkbox" name="attr_grit2" value="1"></span>
+            <span class="outgunned-gritnormal"><input type="checkbox" name="attr_grit3" value="1"></span>
+            <span class="outgunned-gritnormal"><input type="checkbox" name="attr_grit4" value="1"></span>
+            <span class="outgunned-gritnormal"><input type="checkbox" name="attr_grit5" value="1"></span>
+            <span class="outgunned-gritnormal"><input type="checkbox" name="attr_grit6" value="1"></span>
+            <span class="outgunned-gritnormal"><input type="checkbox" name="attr_grit7" value="1"></span>
+            <span class="outgunned-gritbad"><input type="checkbox" name="attr_grit8" value="1"><span data-i18n="bad-u">BAD!</span></span>
+            <span class="outgunned-gritnormal"><input type="checkbox" name="attr_grit9" value="1"></span>
+            <span class="outgunned-gritnormal"><input type="checkbox" name="attr_grit10" value="1"></span>
+            <span class="outgunned-gritnormal"><input type="checkbox" name="attr_grit10" value="1"></span>
+            <span class="outgunned-grithot"><input type="checkbox" name="attr_grit12" value="1"><span data-i18n="hot-u">HOT!</span></span>
+        </div>
+        <div>
+            <span class="outgunned-grit-text" data-i18n="badsufferacondition-u">BAD: SUFFER A CONDITION</span>
+            <span class="outgunned-grit-text-hot" data-i18n="hotgain2adrenaline-u">HOT: GAIN 2 ADRENALINE</span>
+        </div>
+    </div>
+    <div class="outgunned-adrenaline">
+        <span data-i18n="adrenaline-u">ADRENALINE!</span>
+        <div>
+            <input class="outgunned-adrenaline-check1" type="checkbox" name="attr_adrenaline1" value="1">
+            <input class="outgunned-adrenaline-check2" type="checkbox" name="attr_adrenaline2" value="1">
+            <input class="outgunned-adrenaline-check3" type="checkbox" name="attr_adrenaline3" value="1">
+            <input class="outgunned-adrenaline-check4" type="checkbox" name="attr_adrenaline4" value="1">
+            <input class="outgunned-adrenaline-check5" type="checkbox" name="attr_adrenaline5" value="1">
+            <input class="outgunned-adrenaline-check6" type="checkbox" name="attr_adrenaline6" value="1">
+            <span class="outgunned-adrenaline-icon1"></span>
+            <span class="outgunned-adrenaline-icon2"></span>
+            <span class="outgunned-adrenaline-icon3"></span>
+            <span class="outgunned-adrenaline-icon4"></span>
+            <span class="outgunned-adrenaline-icon5"></span>
+            <span class="outgunned-adrenaline-icon6"></span>
+        </div>
+        <span><span class="outgunned-adrenalin">⚡</span> GAIN +1&nbsp;&nbsp;&nbsp;&nbsp;6<span
+                class="outgunned-adrenalin">⚡</span> TAKE THE SPOTLIGHT</span>
+    </div>
+    <div class="outgunned-spotlight">
+        <img src="https://files.d20.io/images/446731385/1vBgVUdgKdxYN0Bb1js_WQ/original.png?175113465155">
+        <input type="checkbox" name="attr_spotlight1" value="1">
+        <input type="checkbox" name="attr_spotlight2" value="1">
+        <input type="checkbox" name="attr_spotlight3" value="1">
+    </div>
+    <div class="outgunned-roulette">
+        <img src="https://files.d20.io/images/446819314/AeymkX05IDt8tia0COMKUA/original.png?175118357055">
+        <input type="checkbox" name="attr_roulette1" value="1" checked>
+        <input type="checkbox" name="attr_roulette2" value="1">
+        <input type="checkbox" name="attr_roulette3" value="1">
+        <input type="checkbox" name="attr_roulette4" value="1">
+        <input type="checkbox" name="attr_roulette5" value="1">
+        <input type="checkbox" name="attr_roulette6" value="1">
+        <button type="action" name="act_roulette">⚅</button>
+    </div>
+    <div class="outgunned-feats">
+        <span data-i18n="feats-u">FEATS</span>
+        <table style="width: 100%;">
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" name="attr_feat1">
+                    </td>
+                </tr>
+                <tr>
+                    <td><textarea name="attr_feat1desc"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="attr_feat2">
+                    </td>
+                </tr>
+                <tr>
+                    <td><textarea name="attr_feat2desc"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="attr_feat3">
+                    </td>
+                </tr>
+                <tr>
+                    <td><textarea name="attr_feat3desc"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="attr_feat4">
+                    </td>
+                </tr>
+                <tr>
+                    <td><textarea name="attr_feat4desc"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="attr_feat5">
+                    </td>
+                </tr>
+                <tr>
+                    <td><textarea name="attr_feat5desc"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="attr_feat6">
+                    </td>
+                </tr>
+                <tr>
+                    <td><textarea name="attr_feat6desc"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="outgunned-mission">
+        <div>
+            <span data-i18n="mission-u">MISSION</span>
+            <input type="text" name="attr_mission">
+        </div>
+        <div>
+            <span data-i18n="experiences-u">EXPERIENCES</span>
+            <input type="text" name="attr_experiences1">
+            <input type="text" name="attr_experiences2">
+            <input type="text" name="attr_experiences3">
+            <input type="text" name="attr_experiences4">
+            <span data-i18n="achievementsscars-u">ACHIEVEMENTS, SCARS, BONDS & REPUTATIONS</span>
+        </div>
+    </div>
+    <div class="outgunned-youlook">
+        <div>
+            <span data-i18n="youlook-u">YOU LOOK</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td data-i18n="hurt-u">HURT -</td>
+                        <td><input type="checkbox" name="attr_yl_hurt" value="1"></td>
+                        <td><span>&nbsp;BRAWN</span></td>
+                        <td></td>
+                        <td data-i18n="tired-u">TIRED -</td>
+                        <td><input type="checkbox" name="attr_yl_tired" value="1"></td>
+                        <td><span>&nbsp;NONE</span></td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="nervous-u">NERVOUS -</td>
+                        <td><input type="checkbox" name="attr_yl_nervous" value="1"></td>
+                        <td><span>&nbsp;NERVES</span></td>
+                        <td></td>
+                        <td><input type="text" name="attr_yl_custom1desc"> -</td>
+                        <td><input type="checkbox" name="attr_yl_custom1" value="1"></td>
+                        <td><span>&nbsp;NONE</span></td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="likeafool-u">LIKE A FOOL -</td>
+                        <td><input type="checkbox" name="attr_yl_likeafool" value="1"></td>
+                        <td><span>&nbsp;SMOOTH</span></td>
+                        <td></td>
+                        <td><input type="text" name="attr_yl_custom2desc"> -</td>
+                        <td><input type="checkbox" name="attr_yl_custom2" value="1"></td>
+                        <td><span>&nbsp;NONE</span></td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="distracted-u">DISTRACTED -</td>
+                        <td><input type="checkbox" name="attr_yl_distracted" value="1"></td>
+                        <td><span>&nbsp;FOCUS</span></td>
+                        <td></td>
+                        <td><input type="text" name="attr_yl_custom3desc"> -</td>
+                        <td><input type="checkbox" name="attr_yl_custom3" value="1"></td>
+                        <td><span>&nbsp;NONE</span></td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="scared-u">SCARED -</td>
+                        <td><input type="checkbox" name="attr_yl_scared" value="1"></td>
+                        <td><span>&nbsp;CRIME</span></td>
+                        <td></td>
+                        <td style="color: #a33225;" data-i18n="broken-u">BROKEN -</td>
+                        <td><input type="checkbox" name="attr_yl_broken" value="1"></td>
+                        <td><span style="color: #cd957d;">&nbsp;ALL</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <span data-i18n="your4thcondition-u">YOUR 4TH CONDITION IS ALWAYS BROKEN</span>
+        </div>
+    </div>
+    <div class="outgunned-gunsngear">
+        <span data-i18n="gunsgear-u">GUNS & GEAR</span>
+        <div class="outgunned-gunsngear-guns">
+            <span data-i18n="gun-u">GUN</span>
+            <span data-i18n="melee-u">MELEE</span>
+            <span data-i18n="close-u">CLOSE</span>
+            <span data-i18n="medium-u">MEDIUM</span>
+            <span data-i18n="long-u">LONG</span>
+            <span data-i18n="mags-u">MAGS</span>
+
+            <input type="text" name="attr_weapon1">
+            <input type="number" name="attr_weapon1_melee">
+            <input type="number" name="attr_weapon1_close">
+            <input type="number" name="attr_weapon1_medium">
+            <input type="number" name="attr_weapon1_long">
+            <div>
+                <input type="checkbox" name="attr_weapon1_mag1" value="1">
+                <input type="checkbox" name="attr_weapon1_mag2" value="1">
+                <input type="checkbox" name="attr_weapon1_mag3" value="1">
+            </div>
+
+            <input type="text" name="attr_weapon2">
+            <input type="number" name="attr_weapon2_melee">
+            <input type="number" name="attr_weapon2_close">
+            <input type="number" name="attr_weapon2_medium">
+            <input type="number" name="attr_weapon2_long">
+            <div>
+                <input type="checkbox" name="attr_weapon2_mag1" value="1">
+                <input type="checkbox" name="attr_weapon2_mag2" value="1">
+                <input type="checkbox" name="attr_weapon2_mag3" value="1">
+            </div>
+
+            <input type="text" name="attr_weapon3">
+            <input type="number" name="attr_weapon3_melee">
+            <input type="number" name="attr_weapon3_close">
+            <input type="number" name="attr_weapon3_medium">
+            <input type="number" name="attr_weapon3_long">
+            <div>
+                <input type="checkbox" name="attr_weapon3_mag1" value="1">
+                <input type="checkbox" name="attr_weapon3_mag2" value="1">
+                <input type="checkbox" name="attr_weapon3_mag3" value="1">
+            </div>
+        </div>
+        <div class="outgunned-gunsngear-gear">
+            <div>
+                <input type="text" name="attr_gear1">
+                <span>O</span>
+            </div>
+            <div>
+                <input type="text" name="attr_gear2">
+                <span>O</span>
+            </div>
+            <div>
+                <input type="text" name="attr_gear3">
+                <span>O</span>
+            </div>
+            <div>
+                <input type="text" name="attr_gear4">
+                <span>O</span>
+            </div>
+            <div>
+                <input type="text" name="attr_gear5">
+                <span>O</span>
+            </div>
+        </div>
+    </div>
+    <div class="outgunned-cash-storage-ride">
+        <div class="outgunned-cash">
+            <img src="https://files.d20.io/images/446824562/jZ7Af650GRC1Gq6x-uD6ZQ/original.png?175118858955">
+            <div>
+                <input type="checkbox" name="attr_cash1" value="1">
+                <input type="checkbox" name="attr_cash2" value="1">
+                <input type="checkbox" name="attr_cash3" value="1">
+                <input type="checkbox" name="attr_cash4" value="1">
+                <input type="checkbox" name="attr_cash5" value="1">
+            </div>
+        </div>
+        <div class="outgunned-storage">
+            <span data-i18n="storage-u">STORAGE</span>
+            <input type="text" name="attr_storage1">
+            <input type="text" name="attr_storage2">
+            <input type="text" name="attr_storage3">
+            <input type="text" name="attr_storage4">
+        </div>
+        <div class="outgunned-ride">
+            <span data-i18n="ride-u">RIDE</span>
+            <div>
+                <span data-i18n="name-u">NAME</span>
+                <input type="text" name="attr_ridename">
+            </div>
+            <div>
+                <span class="outgunned-ride-hits">
+                    <input type="checkbox" name="attr_ride_hits_1" value="1">
+                </span>
+                <span class="outgunned-ride-hits">
+                    <input type="checkbox" name="attr_ride_hits_2" value="1">
+                </span>
+                <span class="outgunned-ride-hits">
+                    <input type="checkbox" name="attr_ride_hits_3" value="1">
+                </span>
+                <span class="outgunned-ride-speed">
+                    <input type="text" name="attr_ride_speed" value="">
+                </span>
+                <span class="outgunned-ride-armour">
+                    <input type="checkbox" name="attr_ride_armour_1" value="1">
+                </span>
+                <span class="outgunned-ride-armour">
+                    <input type="checkbox" name="attr_ride_armour_2" value="1">
+                </span>
+                <span class="outgunned-ride-armour">
+                    <input type="checkbox" name="attr_ride_armour_3" value="1">
+                </span>
+            </div>
+            <img style="width: 100%;"
+                 src="https://files.d20.io/images/446826866/PgYe4uwjsg3QqM_PFlJLYg/original.png?175119055755">
+            <div style="display: flex; margin-top: -5px; margin-left: -10px;">
+                <input type="checkbox" name="attr_ride_type_1" value="1">
+                <input type="checkbox" name="attr_ride_type_2" value="1">
+                <input type="checkbox" name="attr_ride_type_3" value="1">
+                <input type="checkbox" name="attr_ride_type_4" value="1">
+                <input type="checkbox" name="attr_ride_type_5" value="1">
+            </div>
+        </div>
+        <input type="hidden" name="attr_diceface1"
+               value="[img](https://files.d20.io/images/446909639/xj-NbyLSOFBVTqGynheg-Q/original.png)"/>
+        <input type="hidden" name="attr_diceface2"
+               value="[img](https://files.d20.io/images/446909641/tDboN9HIp4IvUwEU5CnQhQ/original.png)"/>
+        <input type="hidden" name="attr_diceface3"
+               value="[img](https://files.d20.io/images/446909638/WNbACtn06TNM5kw_BmwuBg/original.png)"/>
+        <input type="hidden" name="attr_diceface4"
+               value="[img](https://files.d20.io/images/446909640/1whXyW9BCTW9-naYpmc4mQ/original.png)"/>
+        <input type="hidden" name="attr_diceface5"
+               value="[img](https://files.d20.io/images/446909643/_Q88I44WouQ7iGx-gIlJsA/original.png)"/>
+        <input type="hidden" name="attr_diceface6"
+               value="[img](https://files.d20.io/images/446909642/iFneDRiqCj7JbUa0KoS65A/original.png)"/>
+        <input type="hidden" name="attr_lastroll" value=""/>
+    </div>
+    <div class="outgunned-gunsngear outgunned-notes">
+        <span data-i18n="notes-u">NOTES</span>
+        <textarea name="attr_notes"></textarea>
+    </div>
+</div>
+<rolltemplate class="sheet-rolltemplate-diceroller">
+    <div class="sheet-outgunned-rolltemplate">
+        <div>
+            <span>{{character}}</span>
+            <div>{{diceresult1}} {{resulttype1}}</div>
+            <div>{{diceresult2}} {{resulttype2}}</div>
+            <div>{{diceresult3}} {{resulttype3}}</div>
+            <div>{{diceresult4}} {{resulttype4}}</div>
+            <div>{{diceresult5}} {{resulttype5}}</div>
+            <div>{{diceresult6}} {{resulttype6}}</div>
+            <span>{{message}}</span>
+            <span>{{result}}</span>
+        </div>
+    </div>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-hidden">
+
+</rolltemplate>
+
+<!--    -->
+<!--    -->
+<!--  Sheetworker  -->
+<!--    -->
+<!--    -->
+<script type="text/worker">
+
+    const diceParser = function(info, lastAggregatedRolls, diceToReroll, allin, free) {
+        // write your sheetworker to do things here
+        console.log("Rolling dice!");
+
+        getAttrs(["num_dice", "diceface1", "diceface2", "diceface3", "diceface4", "diceface5", "diceface6"], function(v) {
+
+            console.log("Num dice: " + v.num_dice);
+
+            // Start a roll JUST to collect the dice roll results so we can build our output
+
+            // If doing a re-roll substitiute the number of dice we want to re-roll
+            let message = "";
+            if(diceToReroll) {
+                v.num_dice = diceToReroll;
+                message="RE-ROLL";
+            }
+            if(free) {
+                message="FREE RE-ROLL";
+            }
+            if(allin) {
+                message="ALL IN";
+            }
+
+            startRoll("&{template:hidden} {{roll=[[" + v.num_dice + "D6]]}}", (dummyResults) => {
+
+                // Roll results example : {"rollId":"-OTvv7we44Qrp8QNKp0u","results":{"roll":{"result":11,"dice":[2,6,1,2],"expression":"4D6","rolls":[{"sides":6,"dice":4,"results":[2,6,1,2]}]}}}
+
+                // Need to count up the matching rolls 'yahtzee' style
+                let aggregatedRolls = {
+                    1: 0,
+                    2: 0,
+                    3: 0,
+                    4: 0,
+                    5: 0,
+                    6: 0
+                };
+
+                console.log("lastAggregatedRolls: " + JSON.stringify(lastAggregatedRolls));
+                // If a re-roll or all-in replace the base aggregated rolls with the previous ones
+                if(lastAggregatedRolls) {
+                    aggregatedRolls = lastAggregatedRolls;
+                }
+
+                dummyResults.results.roll.dice.forEach(val => {
+                    aggregatedRolls[+val] = aggregatedRolls[+val]+1;
+                });
+
+                console.log(JSON.stringify(aggregatedRolls));
+
+                finishRoll(dummyResults.rollId, {});
+
+                const resultTypes = ["", "", "BASIC", "CRITICAL", "EXTREME", "IMPOSSIBLE", "JACKPOT!"]
+
+                // We now know how many of each dice values we rolled, so we can build strings of image urls and send them through another dice roll
+                let stubRoll = "&{template:diceroller} {{character= @{character_name} }} ";
+                let successes = 0;
+                for(let i=1; i<=6; i++) {
+                    stubRoll += "{{diceresult" + i + "=" + v["diceface" + i].repeat(aggregatedRolls[i]) + "}} ";
+                    if(aggregatedRolls[i] > 1) {
+                        stubRoll += "{{resulttype" + i + "=" + resultTypes[aggregatedRolls[i]] + "}} ";
+                        //console.log("Adding success type");
+                        successes++;
+                    }
+                }
+
+                // Store successes
+                aggregatedRolls.successes = successes;
+
+                // Store the roll results for re-rolls, all-ins
+                setAttrs({lastroll: allin ? "" : JSON.stringify(aggregatedRolls)});
+
+                stubRoll += "{{message=" + message + "}} ";
+
+                //console.log(stubRoll);
+                startRoll("&{template:diceroller} {{character= @{character_name} }} " + stubRoll, (results) => {
+
+                    finishRoll(results.rollId, {});
+                });
+            });
+        });
+    }
+
+    on("clicked:diceroller", diceParser);
+
+    const reroll = function(info, allin, free) {
+
+        // Get our last roll
+        getAttrs(["lastroll"], function(values) {
+
+            if(values.lastroll === "") {
+                // We've done an all-in so no re-rolls etc. allowed
+                startRoll("&{template:diceroller} {{character= @{character_name} }} {{message=YOU WENT ALL-IN!!}}", (results) => {
+
+                    finishRoll(results.rollId, {});
+                });
+                return;
+            }
+
+            let lastAggregatedRolls = JSON.parse(values.lastroll);
+
+            // Count the number of rolls where we got 1 symbol
+            let diceToReroll = 0;
+            let hasSuccess = false;
+            for(let i=1; i<=6; i++) {
+                if(lastAggregatedRolls[i] === 1) {
+                    diceToReroll++;
+                    lastAggregatedRolls[i] = 0;
+                }
+                else if(lastAggregatedRolls[i] > 1) {
+                    hasSuccess = true;
+                }
+            }
+            console.log("Dice to re-roll: " + diceToReroll);
+            if(!allin && ((diceToReroll === 0 && !free) || (hasSuccess === false && !free))) {
+                // Send an error message via a roll template
+                console.log("ERROR: No dice to re-roll!");
+                startRoll("&{template:diceroller} {{character= @{character_name} }} {{message=NO DICE TO RE-ROLL!}}", (results) => {
+
+                    finishRoll(results.rollId, {});
+                });
+            }
+            else {
+                // We have some dice to roll
+                console.log("Re-rolling " + diceToReroll + " dice");
+                diceParser({}, lastAggregatedRolls, diceToReroll, allin, free);
+            }
+        });
+    }
+
+    on("clicked:reroll", reroll);
+
+    on("clicked:freereroll", function() {
+        reroll({}, false, true);
+    });
+
+    on("clicked:allin", function() {
+        reroll({}, true);
+    });
+
+    on("change:roulette2 change:roulette3 change:roulette4 change:roulette5 change:roulette6 ", function(e) {
+
+        console.log("change:rouletteN: " + JSON.stringify(e));
+
+        // Fill in any blanks if user accidentally clicks out of sequence
+        getAttrs(["roulette1", "roulette2", "roulette3", "roulette4", "roulette5", "roulette6"], function(values) {
+
+            // Get changed number
+            let clicked = +e.sourceAttribute.replace("roulette", "");
+
+            // See how far round the wheel we are:
+            let current = 1;
+            let attrs = {};
+            for(let i=1; i<=6; i++) {
+                if(+values["roulette" + i] === 0 && i < clicked) {
+                    // Fill it in
+                    attrs["roulette" + i] = 1;
+                }
+                if(+values["roulette" + i] === 1 && i > clicked) {
+                    // Fill it in
+                    attrs["roulette" + i] = 0;
+                }
+            }
+
+            setAttrs(attrs, {silent: true});
+        });
+    });
+
+    on("clicked:roulette", function() {
+        getAttrs(["roulette1", "roulette2", "roulette3", "roulette4", "roulette5", "roulette6"], function(values) {
+            // See how far round the wheel we are:
+            let current = 1;
+            for(let i=1; i<=6; i++) {
+                if(+values["roulette" + i] === 1) {
+                    current = i;
+                }
+            }
+
+            console.log("Current roulette: " + current);
+
+            // Now need to roll a D6 and get higher
+            startRoll("&{template:hidden} {{result=[[1D6]]}}", (dummyResults) => {
+                message = "SURVIVED!";
+                console.log(JSON.stringify(dummyResults));
+                if(dummyResults.results.result.result <= current) {
+                    message = "LEFT FOR DEAD!"
+                }
+                finishRoll(dummyResults.rollId, {});
+
+                startRoll("&{template:diceroller} {{character= @{character_name} }} {{result=" + dummyResults.results.result.result + "}} {{message=" + message + "}}", (results) => {
+                    finishRoll(results.rollId, {});
+                });
+            });
+        });
+    });
+
+
+
+
+
+</script>
