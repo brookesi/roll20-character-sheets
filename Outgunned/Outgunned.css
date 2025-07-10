@@ -292,6 +292,11 @@ Hot    https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png
     background-size: 40px;
 }
 
+.outgunned-gritnormal.outgunned-image-adventure > input[type="checkbox"],
+.outgunned-grithot.outgunned-image-adventure > input[type="checkbox"] {
+    filter: hue-rotate(-45deg);
+}
+
 .outgunned-gritbad {
     display: block;
     background-image: url(https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png);
@@ -424,7 +429,7 @@ Hot    https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png
 }
 
 .outgunned-spotlight-image-adventure,
-.outgunned-spotlight-image-adventure ~ input[type="checkbox"] {
+.outgunned-spotlight-image.outgunned-nodisplay ~ input[type="checkbox"] {
     filter: hue-rotate(-45deg);
 }
 
