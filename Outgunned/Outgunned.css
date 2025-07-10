@@ -634,6 +634,7 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
 }
 
 .outgunned-roulette.outgunned-image-adventure > input[type="checkbox"],
+.outgunned-cash.outgunned-image-adventure > div > input[type="checkbox"],
 .outgunned-roulette.outgunned-image-adventure > button {
     filter: hue-rotate(-45deg);
 }
