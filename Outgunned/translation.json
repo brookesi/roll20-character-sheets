@@ -1,4 +1,5 @@
 {
+  "adventuremode-u": "Adventure Mode",
   "roll-u": "ROLL",
   "reroll-u": "RE-ROLL",
   "freereroll-u": "FREE RE-ROLL",
@@ -7,6 +8,7 @@
   "role-u": "ROLE",
   "trope-u": "TROPE",
   "job-u": "JOB",
+  "background-u": "BACKGROUND",
   "age-u": "AGE",
   "flaw-u": "FLAW",
   "catchphrase-u": "CATCHPHRASE",
@@ -41,8 +43,10 @@
   "badsufferacondition-u": "BAD: SUFFER A CONDITION",
   "hotgain2adrenaline-u": "HOT: GAIN 2 ADRENALINE",
   "adrenaline-u": "ADRENALINE!",
+  "luck-u": "LUCK!",
   "feats-u": "FEATS",
   "mission-u": "MISSION",
+  "treasure-u": "TREASURE",
   "experiences-u": "EXPERIENCES",
   "achievementsscars-u": "ACHIEVEMENTS, SCARS, BONDS & REPUTATIONS",
   "youlook-u": "YOU LOOK",
@@ -62,6 +66,9 @@
   "long-u": "LONG",
   "mags-u": "MAGS",
   "storage-u": "STORAGE",
+  "backpack-u": "BACKPACK",
   "ride-u": "RIDE",
-  "notes-u": "NOTES"
+  "bag-u": "BAG",
+  "notes-u": "NOTES",
+  "cash-u": "CA$H"
 }

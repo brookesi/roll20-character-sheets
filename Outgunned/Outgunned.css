@@ -1,10 +1,48 @@
+.outgunned-main-grid-var {
+    --primary-color: #a33225;
+}
+
+.outgunned-nodisplay {
+    display: none;
+}
+
+.outgunned-main-grid-var-adventure {
+/*    --primary-color: #5f4228;*/
+    --primary-color: #6f4700;
+    background-image: url(https://files.d20.io/images/448139838/BqYmngrnLbwMpesQGJ5NeQ/original.jpg) !important;
+}
+
+.outgunned-logo,
+.outgunned-logo-adventure {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.outgunned-logo-adventure {
+    margin-top: 15px;
+}
+
+.outgunned-adventure-margin {
+    margin-left: 5px !important;
+}
+
+/* Turn red images brown for adventure mode */
+.outgunned-image-adventure {
+    filter: hue-rotate(45deg);
+}
+
 input[type="checkbox"] {
-    accent-color: #a33225;
+    accent-color: var(--primary-color);
+}
+
+.outgunned-nodisplay {
+    display: none !important;
 }
 
 .outgunned-adrenalin {
     color: transparent !important;
-    text-shadow: 0 0 0 #a33225;
+    text-shadow: 0 0 0 var(--primary-color);
 }
 
 .outgunned-dice-roller {
@@ -26,11 +64,11 @@ input[type="checkbox"] {
     "cashstorageride cashstorageride cashstorageride"
     "notes notes notes";
     grid-template-columns: 0.9fr 0.8fr 1fr;
-    background-image: url(https://files.d20.io/images/446705807/JzAVhd_whGcx6p6g_2xaHg/original.jpg?175112324255)
+    background-image: url(https://files.d20.io/images/446705807/JzAVhd_whGcx6p6g_2xaHg/original.jpg);
 }
 
 .outgunned-box {
-    border: 2px solid #a33225;
+    border: 2px solid var(--primary-color);
 }
 
 .outgunned-avatar {
@@ -66,14 +104,14 @@ input[type="checkbox"] {
 .outgunned-details > div,
 .outgunned-mission > div:first-of-type,
 .outgunned-ride > div:first-of-type {
-    border-bottom: 2px solid #a33225;
+    border-bottom: 2px solid var(--primary-color);
     display: flex;
     align-items: end;
 }
 
 .outgunned-details > div > span,
 .outgunned-mission > div:first-of-type > span {
-    color: #a33225;
+    color: var(--primary-color);
     font-size: 12px;
     font-weight: bold;
     align-content: end;
@@ -92,14 +130,14 @@ input[type="checkbox"] {
     border-radius: 0;
     margin-bottom: 1px;
     padding: 4px;
-    outline-color: #a33225;
+    outline-color: var(--primary-color);
     color: black;
     padding-left: 10px;
 }
 
 .outgunned-statistics {
     grid-area: statistics;
-    border: 1px solid #a33225;
+    border: 1px solid var(--primary-color);
     margin-top: 30px;
 }
 
@@ -109,7 +147,7 @@ input[type="checkbox"] {
 
 .outgunned-statistics-block > div:first-child > span:first-child {
     color: white;
-    background-color: #a33225;
+    background-color: var(--primary-color);
     font-weight: bold;
     font-size: 20px;
     clip-path: polygon(
@@ -180,7 +218,7 @@ input.outgunned-attr[type="checkbox"] {
 input.outgunned-attr[type="checkbox"] + span::before {
     position: relative;
     top: 0px;
-    color: #a33225;
+    color: var(--primary-color);
     text-shadow: none;
     text-align: center;
     content: "◇";
@@ -203,11 +241,11 @@ Hot    https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png
 .outgunned-grit {
     grid-area: grit;
     margin-top: 30px;
-    color: #a33225;
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 20px;
     margin: 30px auto 0 auto;
-    border: 1px solid #a33225;
+    border: 1px solid var(--primary-color);
     padding: 3px;
 }
 
@@ -256,7 +294,7 @@ Hot    https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png
 }
 
 .outgunned-grit > div > span:nth-of-type(12) > span:first-of-type {
-    color: #a33225;
+    color: var(--primary-color);
 }
 
 .outgunned-grit > div:nth-of-type(2) {
@@ -265,7 +303,7 @@ Hot    https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png
 }
 
 .outgunned-grit-hot {
-    border: 2px solid #a33225 !important;
+    border: 2px solid var(--primary-color) !important;
 }
 
 .outgunned-grit-text {
@@ -275,7 +313,7 @@ Hot    https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png
 }
 
 .outgunned-grit-text-hot {
-    color: #a33225;
+    color: var(--primary-color);
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -284,7 +322,7 @@ Hot    https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png
 .outgunned-feats {
     grid-area: feats;
     margin-left: 10px;
-    border: 1px solid #a33225;
+    border: 1px solid var(--primary-color);
     padding: 3px;
     margin-top: 15px;
 }
@@ -296,7 +334,7 @@ Hot    https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png
     margin-right: 10px;
     font-weight: bold;
     font-size: 20px;
-    color: #a33225;
+    color: var(--primary-color);
 }
 
 .outgunned-feats > table > tbody > tr > td > input {
@@ -321,7 +359,7 @@ Hot    https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png
 
 .outgunned-spotlight span {
     margin-top: 30px;
-    color: #a33225;
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 20px;
 }
@@ -353,6 +391,11 @@ Hot    https://files.d20.io/images/447651819/0rnMk29Fz6xii0iJLDHeZg/original.png
 .outgunned-spotlight  input:nth-of-type(3) {
     left: 190px;
     top: 69.5px;
+}
+
+.outgunned-spotlight-image-adventure,
+.outgunned-spotlight-image-adventure ~ input[type="checkbox"] {
+    filter: hue-rotate(-45deg);
 }
 
 /*
@@ -401,29 +444,29 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
     background-image: url(https://files.d20.io/images/447912548/EWIH5QgtpBdcnE7TEMhupw/original.png);
 }
 
-.outgunned-adrenaline > span:first-of-type {
+.outgunned-adrenaline > span {
     font-size: 20px;
     font-weight: bold;
-    color: #a33225;
+    color: var(--primary-color);
 }
 
-.outgunned-adrenaline > span:nth-of-type(2) {
+.outgunned-adrenaline > span:nth-of-type(3) {
     font-size: 12px;
     font-weight: bold;
-    color: #a33225;
+    color: var(--primary-color);
 }
 
 .outgunned-mission {
     grid-area: mission;
     margin-left: 10px;
-    border: 1px solid #a33225;
+    border: 1px solid var(--primary-color);
     padding: 3px;
     margin-top: 5px;
 }
 
 .outgunned-mission > div > span {
     margin-top: 30px;
-    color: #a33225;
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 20px;
 }
@@ -437,7 +480,7 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
 }
 
 .outgunned-mission > div:nth-of-type(2) > input {
-    border-bottom: 2px solid #a33225;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .outgunned-mission > div:nth-of-type(2) > span:nth-of-type(2) {
@@ -455,7 +498,7 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
 
 .outgunned-youlook > div:first-child > span:first-child {
     color: white;
-    background-color: #a33225;
+    background-color: var(--primary-color);
     font-weight: bold;
     font-size: 20px;
     clip-path: polygon(
@@ -549,7 +592,7 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
 }
 
 .outgunned-roulette > button {
-    color: #a33225;
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 3em;
     position: absolute;
@@ -560,13 +603,18 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
     background: transparent;
 }
 
+.outgunned-roulette.outgunned-image-adventure > input[type="checkbox"],
+.outgunned-roulette.outgunned-image-adventure > button {
+    filter: hue-rotate(-45deg);
+}
+
 .outgunned-gunsngear {
     grid-area: gunsngear;
 }
 
 .outgunned-gunsngear > span:first-child {
     color: white;
-    background-color: #a33225;
+    background-color: var(--primary-color);
     font-weight: bold;
     font-size: 20px;
     clip-path: polygon(
@@ -591,7 +639,7 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
 
 .outgunned-gunsngear-guns > span {
     color: white;
-    background-color: #a33225;
+    background-color: var(--primary-color);
     font-weight: bold;
     font-size: 12px;
     text-align: center;
@@ -641,13 +689,18 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
     font-size: 3em;
     margin-top: -13px;
     margin-bottom: -13px;
-    color: #a33225;
+    color: var(--primary-color);
 }
 
 .outgunned-cash-storage-ride {
     grid-area: cashstorageride;
     display: grid;
     grid-template-columns: 0.75fr 1.75fr 2fr;
+}
+
+.outgunned-cash {
+    text-align: center;
+    z-index: 1;
 }
 
 .outgunned-cash > img {
@@ -657,19 +710,29 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
 }
 
 .outgunned-cash > div {
-    display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    margin-left: -20px;
+}
+
+.outgunned-cash-label {
+    display: block;
+    margin-top: 30px;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 20px;
+    filter: hue-rotate(-45deg);
+    margin-left: -20px;
 }
 
 .outgunned-storage {
     margin-top: 30px;
     margin-right: 15px;
+    z-index: 0;
 }
 
-.outgunned-storage > span:first-child {
+.outgunned-storage > span {
     color: white;
-    background-color: #a33225;
+    background-color: var(--primary-color);
     font-weight: bold;
     font-size: 20px;
     padding-right: 10%;
@@ -683,8 +746,17 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
     background-color: white;
 }
 
-.outgunned-ride {
+.outgunned-ride,
+.outgunned-bag {
     margin-top: 30px;
+}
+
+.outgunned-backpack-image {
+    position: absolute;
+    width: 210px;
+    margin-left: -90px;
+    z-index: -1;
+    margin-top: -30px;
 }
 
 .outgunned-ride-hits {
@@ -718,7 +790,8 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
     height: 40px;
 }
 
-.outgunned-ride > div input {
+.outgunned-ride > div input,
+.outgunned-bag > input {
     width: 100%;
     background-color: white;
     filter: brightness(100%);
@@ -738,7 +811,7 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
     border: 0;
     font-weight: bold;
     font-size: 20px;
-    color: #a33225;
+    color: var(--primary-color);
 }
 
 .outgunned-ride > div > input[type="checkbox"]:nth-of-type(4),
@@ -747,9 +820,10 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
     accent-color: black
 }
 
-.outgunned-ride > span:first-child {
+.outgunned-ride > span:first-child,
+.outgunned-bag > span:first-child {
     color: white;
-    background-color: #a33225;
+    background-color: var(--primary-color);
     font-weight: bold;
     font-size: 20px;
     clip-path: polygon(
@@ -765,8 +839,12 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
     margin-bottom: 10px;
 }
 
+.outgunned-bag > span:first-child {
+    margin-bottom: 0;
+}
+
 .outgunned-ride > div > span {
-    color: #a33225;
+    color: var(--primary-color);
     font-size: 12px;
     font-weight: bold;
     align-content: center;
@@ -782,7 +860,7 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
 }
 
 .sheet-rolltemplate-diceroller {
-    border: 2px solid #a33225;
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
     padding: 5px;
 }
@@ -793,7 +871,7 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
 }
 
 .sheet-rolltemplate-diceroller > div > div > span {
-    color: #a33225;
+    color: var(--primary-color);
     font-weight: bold;
     font-style: italic;
     font-size: 2em;
@@ -806,7 +884,7 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
 }
 
 .sheet-rolltemplate-diceroller > div > div > div {
-    color: #a33225;
+    color: var(--primary-color);
     font-weight: bold;
     display: inline-flex;
     font-size: 0.75em;
@@ -830,4 +908,6 @@ Icon: https://files.d20.io/images/447657537/-fY4DtclMXmG0gV4_khZDA/original.png
 .outgunned-notes > textarea {
     box-sizing: border-box;
     background-color: white;
+    resize: vertical;
 }
+

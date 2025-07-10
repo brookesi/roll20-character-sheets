@@ -1,7 +1,12 @@
-<div class="outgunned-main-grid">
+<div class="outgunned-main-grid outgunned-main-grid-var">
     <div class="outgunned-avatar">
+        <div>
+            <input class="outgunned-adventure-margin" name="attr_adventuretoggle" type="checkbox" value="1"/>
+            <span class="outgunned-adventure-margin" data-i18n="adventuremode-u">Adventure Mode</span>
+        </div>
         <img name="attr_character_avatar">
-        <img src="https://www.belloflostsouls.net/wp-content/uploads/2023/05/outgunned-logo.jpg">
+        <img class="outgunned-logo" src="https://files.d20.io/images/448141242/S9psVgW-SVUuIU_eIqKUQw/original.jpg">
+        <img class="outgunned-logo-adventure outgunned-nodisplay" src="https://files.d20.io/images/448141274/xsRVp_0WEmLPX3Or02lbSA/original.png?">
         <div class="outgunned-dice-roller">
             <input type="number" name="attr_num_dice">
             <button type="action" name="act_diceroller" data-i18n="roll-u">ROLL</button>
@@ -26,7 +31,8 @@
             <input type="text" name="attr_trope">
         </div>
         <div>
-            <span style="width: 52%" data-i18n="job-u">JOB</span>
+            <span class="outgunned-job-label" style="width: 52%" data-i18n="job-u">JOB</span>
+            <span class="outgunned-background-label outgunned-nodisplay" style="width: 52%" data-i18n="background-u">BACKGROUND</span>
             <input type="text" name="attr_job">
             <span data-i18n="age-u">AGE</span>
             <input type="text" name="attr_age">
@@ -400,7 +406,8 @@
         </div>
     </div>
     <div class="outgunned-adrenaline">
-        <span data-i18n="adrenaline-u">ADRENALINE!</span>
+        <span class="outgunned-adrenaline-label" data-i18n="adrenaline-u">ADRENALINE!</span>
+        <span class="outgunned-luck-label outgunned-nodisplay" data-i18n="luck-u">LUCK!</span>
         <div>
             <input class="outgunned-adrenaline-check1" type="checkbox" name="attr_adrenaline1" value="1">
             <input class="outgunned-adrenaline-check2" type="checkbox" name="attr_adrenaline2" value="1">
@@ -419,7 +426,8 @@
                 class="outgunned-adrenalin">⚡</span> TAKE THE SPOTLIGHT</span>
     </div>
     <div class="outgunned-spotlight">
-        <img src="https://files.d20.io/images/446731385/1vBgVUdgKdxYN0Bb1js_WQ/original.png?175113465155">
+        <img class="outgunned-spotlight-image" src="https://files.d20.io/images/446731385/1vBgVUdgKdxYN0Bb1js_WQ/original.png">
+        <img class="outgunned-spotlight-image-adventure outgunned-nodisplay" src="https://files.d20.io/images/448140728/YJBLWCNwEnEDnnpiBj8VYg/original.png">
         <input type="checkbox" name="attr_spotlight1" value="1">
         <input type="checkbox" name="attr_spotlight2" value="1">
         <input type="checkbox" name="attr_spotlight3" value="1">
@@ -510,7 +518,8 @@
     <br>
     <div class="outgunned-mission">
         <div>
-            <span data-i18n="mission-u">MISSION</span>
+            <span class="outgunned-mission-label" data-i18n="mission-u">MISSION</span>
+            <span class="outgunned-treasure-label outgunned-nodisplay" data-i18n="treasure-u">TREASURE</span>
             <input type="text" name="attr_mission">
         </div>
         <div>
@@ -647,6 +656,7 @@
     <div class="outgunned-cash-storage-ride">
         <div class="outgunned-cash">
             <img src="https://files.d20.io/images/446824562/jZ7Af650GRC1Gq6x-uD6ZQ/original.png?175118858955">
+            <span class="outgunned-cash-label outgunned-nodisplay" data-i18n="cash-u">CASH</span>
             <div>
                 <input type="checkbox" name="attr_cash1" value="1">
                 <input type="checkbox" name="attr_cash2" value="1">
@@ -656,11 +666,14 @@
             </div>
         </div>
         <div class="outgunned-storage">
-            <span data-i18n="storage-u">STORAGE</span>
+            <img class="outgunned-backpack-image outgunned-nodisplay" src="https://files.d20.io/images/448139665/hZU5av1AS_a1XqxNnyKrow/original.png">
+            <span class="outgunned-storage-label" data-i18n="storage-u">STORAGE</span>
+            <span class="outgunned-backpack-label outgunned-nodisplay" data-i18n="backpack-u">BACKPACK</span>
             <input type="text" name="attr_storage1">
             <input type="text" name="attr_storage2">
             <input type="text" name="attr_storage3">
             <input type="text" name="attr_storage4">
+            <input type="text" name="attr_storage5">
         </div>
         <div class="outgunned-ride">
             <span data-i18n="ride-u">RIDE</span>
@@ -700,6 +713,14 @@
                 <input type="checkbox" name="attr_ride_type_4" value="1">
                 <input type="checkbox" name="attr_ride_type_5" value="1">
             </div>
+        </div>
+        <div class="outgunned-bag outgunned-nodisplay">
+            <span data-i18n="bag-u">BAG</span>
+            <input type="text" name="attr_bag1">
+            <input type="text" name="attr_bag2">
+            <input type="text" name="attr_bag3">
+            <input type="text" name="attr_bag4">
+            <input type="text" name="attr_bag5">
         </div>
         <input type="hidden" name="attr_diceface1"
                value="[img](https://files.d20.io/images/446909639/xj-NbyLSOFBVTqGynheg-Q/original.png)"/>
@@ -941,8 +962,106 @@
         });
     });
 
+    on("sheet:opened change:adventuretoggle", function(e) {
+
+        console.log("change:adventuretoggle: " + JSON.stringify(e));
+
+        if(e.triggerName === "sheet:opened") {
+            // Get the adventure toggle and see if we need to apply it
+            getAttrs(["adventuretoggle"], function(values) {
+                adventureMode(+values.adventuretoggle === 1);
+            });
+        }
+        else {
+            adventureMode(+e.newValue === 1);
+        }
+    });
+
+    /*
+     * Change various elements for adventure mode
+     */
+    const adventureMode = (mode) => {
 
 
+        if(mode) {
+            // Text and fill colours etc.
+            $20(".outgunned-main-grid").addClass('outgunned-main-grid-var-adventure');
 
+            // Adrenaline, grit, roulette and cash images need tinting
+            $20('[class*="outgunned-adrenaline-icon"]').addClass('outgunned-image-adventure');
+            $20('.outgunned-gritnormal').addClass('outgunned-image-adventure');
+            $20('.outgunned-grithot').addClass('outgunned-image-adventure');
+            $20('.outgunned-spotlight').addClass('outgunned-image-adventure');
+            $20('.outgunned-roulette').addClass('outgunned-image-adventure');
+            $20('.outgunned-cash').addClass('outgunned-image-adventure');
+
+            // Switch out Spotlight image
+            $20('.outgunned-spotlight-image-adventure').removeClass('outgunned-nodisplay');
+            $20('.outgunned-spotlight-image').addClass('outgunned-nodisplay');
+
+            // Switch out ADRENALINE! label for LUCK!
+            $20('.outgunned-luck-label').removeClass('outgunned-nodisplay');
+            $20('.outgunned-adrenaline-label').addClass('outgunned-nodisplay');
+
+            // Switch out JOB label for BACKGROUND
+            $20('.outgunned-background-label').removeClass('outgunned-nodisplay');
+            $20('.outgunned-job-label').addClass('outgunned-nodisplay');
+
+            // Switch out STORAGE label for BACKPACK
+            $20('.outgunned-backpack-label').removeClass('outgunned-nodisplay');
+            $20('.outgunned-storage-label').addClass('outgunned-nodisplay');
+
+            $20('.outgunned-treasure-label').removeClass('outgunned-nodisplay');
+            $20('.outgunned-mission-label').addClass('outgunned-nodisplay');
+
+            // Switch RIDE panel out for BAG panel
+            $20('.outgunned-bag').removeClass('outgunned-nodisplay');
+            $20('.outgunned-ride').addClass('outgunned-nodisplay');
+            $20('.outgunned-cash > img').addClass('outgunned-nodisplay');
+            $20('.outgunned-cash-label').removeClass('outgunned-nodisplay');
+            $20('.outgunned-backpack-image').removeClass('outgunned-nodisplay');
+
+            // Switch logos
+            $20('.outgunned-logo-adventure').removeClass('outgunned-nodisplay');
+            $20('.outgunned-logo').addClass('outgunned-nodisplay');
+        }
+        else {
+            $20(".outgunned-main-grid").removeClass('outgunned-main-grid-var-adventure');
+
+            $20('[class*="outgunned-adrenaline-icon"]').removeClass('outgunned-image-adventure');
+            $20('.outgunned-gritnormal').removeClass('outgunned-image-adventure');
+            $20('.outgunned-grithot').removeClass('outgunned-image-adventure');
+            $20('.outgunned-spotlight').removeClass('outgunned-image-adventure');
+            $20('.outgunned-roulette').removeClass('outgunned-image-adventure');
+            $20('.outgunned-cash').removeClass('outgunned-image-adventure');
+
+            $20('.outgunned-spotlight-image-adventure').addClass('outgunned-nodisplay');
+            $20('.outgunned-spotlight-image').removeClass('outgunned-nodisplay');
+
+            $20('.outgunned-luck-label').addClass('outgunned-nodisplay');
+            $20('.outgunned-adrenaline-label').removeClass('outgunned-nodisplay');
+
+            $20('.outgunned-background-label').addClass('outgunned-nodisplay');
+            $20('.outgunned-job-label').removeClass('outgunned-nodisplay');
+
+            $20('.outgunned-backpack-label').addClass('outgunned-nodisplay');
+            $20('.outgunned-storage-label').removeClass('outgunned-nodisplay');
+
+            $20('.outgunned-treasure-label').addClass('outgunned-nodisplay');
+            $20('.outgunned-mission-label').removeClass('outgunned-nodisplay');
+
+            $20('.outgunned-bag').addClass('outgunned-nodisplay');
+            $20('.outgunned-ride').removeClass('outgunned-nodisplay');
+            $20('.outgunned-cash > img').removeClass('outgunned-nodisplay');
+            $20('.outgunned-cash-label').addClass('outgunned-nodisplay');
+            $20('.outgunned-backpack-image').addClass('outgunned-nodisplay');
+
+            $20('.outgunned-logo-adventure').addClass('outgunned-nodisplay');
+            $20('.outgunned-logo').removeClass('outgunned-nodisplay');
+        }
+    }
 
 </script>
+<!--
+https://files.d20.io/images/448139665/hZU5av1AS_a1XqxNnyKrow/original.png
+-->
