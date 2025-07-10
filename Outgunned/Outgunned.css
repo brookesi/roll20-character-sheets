@@ -14,6 +14,7 @@
 
 .outgunned-logo,
 .outgunned-logo-adventure {
+    margin-top: 15px !important;
     width: 50%;
     margin: 0 auto;
     display: block;
